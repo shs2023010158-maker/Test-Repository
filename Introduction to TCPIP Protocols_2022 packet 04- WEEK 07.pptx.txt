@@ -1,0 +1,1240 @@
+Network+ Guide to Networks
+6th Edition
+Course Packet 04:
+Introduction to TCP/IP Protocols
+1
+
+Objectives
+Identify and explain the functions of the core TCP/IP protocols
+Network+ Guide to Networks, 6th Edition
+2
+
+Characteristics of TCP/IP (Transmission Control Protocol/Internet Protocol)
+Protocol Suite
+Referred to as “IP” or “TCP/IP”
+Subprotocols include TCP, IP, UDP (user datagram protocol), ARP (address resolution protocol)
+Developed by US Department of Defense
+ARPANET (Advanced Research Projects Agency Network) – 1960s 
+Internet precursor
+Network+ Guide to Networks, 6th Edition
+3
+TCP/IP (Transmission Control Protocol/Internet Protocol) is not simply one protocol, but
+rather a suite of specialized protocols—including TCP, IP, UDP, ARP, and many others—
+called subprotocols.
+3
+
+Characteristics of TCP/IP (cont’d.)
+Advantages of TCP/IP
+Open nature
+Costs nothing to use
+Flexible
+Runs on virtually any platform
+Connects dissimilar operating systems and devices
+Routable
+Transmissions carry Network layer addressing information
+Suitable for large networks
+
+Network+ Guide to Networks, 6th Edition
+4
+● It is open, rather than proprietary—TCP/IP is not owned by a company, which means you do not need to purchase a license to use it. It costs nothing and its code can be edited and modified by any programmer.
+● It is flexible—The TCP/IP suite of protocols can run on virtually any platform and connect dissimilar operating systems and devices.
+● It is routable—TCP/IP transmissions carry Network layer addressing information that can be interpreted by routers to determine the best path for directing data over a network. Not all protocols are routable. Only routable protocols are suitable for large networks.
+4
+
+The TCP/IP Model
+Application layer
+Applications gain access to the network through this layer
+Transport layer
+provide flow control, error checking, and sequencing.
+Internet layer
+handle routing and address resolution.
+Network access layer (or Link layer)
+handle formatting of data and transmission to the network interface.
+
+Network+ Guide to Networks, 6th Edition
+5
+Unlike the OSI model, the TCP/IP model grew to describe how protocols work after the protocols were widely in use. For this reason, it is sometimes considered more practical than the OSI model, which is considered more theoretical. Understanding what functions belong to each layer of the models will come in handy when you’re troubleshooting problems.
+5
+
+Network+ Guide to Networks, 6th Edition
+6
+Figure 4-1 The TCP/IP model compared with the OSI model
+Courtesy Course Technology/Cengage Learning
+● Application layer—Roughly equivalent to the Application, Presentation, and Session layers of the OSI model. Applications gain access to the network through this layer, via protocols such as HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), Telnet, NTP (Network Time Protocol), DHCP (Dynamic Host
+Configuration Protocol), and PING (Packet Internet Groper), to name only some.
+● Transport layer—Roughly corresponds to the Transport layer of the OSI model. This layer holds the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP), which provide flow control, error checking, and sequencing.
+● Internet layer—Equivalent to the Network layer of the OSI model. This layer holds the Internet Protocol (IP), Internet Control Message Protocol (ICMP), Internet Group Management Protocol (IGMP), and Address Resolution Protocol (ARP). These protocols handle routing and address resolution.
+● Network Interface layer (or Link layer)—Roughly equivalent to the Data Link and Physical layers of the OSI model. Functions in this layer handle formatting of data and transmission to the network interface.
+6
+
+The TCP/IP Core Protocols
+TCP/IP suite subprotocols
+Operate in Transport or Network layers of OSI model
+Provide basic services to protocols in other layers
+Most significant protocols in TCP/IP suite
+TCP
+IP
+Network+ Guide to Networks, 6th Edition
+7
+7
+
+TCP (Transmission Control Protocol)
+Transport layer protocol
+Provides reliable data delivery services
+Connection-oriented subprotocol
+Establish connection before transmitting
+Uses sequencing and checksums
+Provides flow control
+TCP segment format
+Encapsulated by IP packet in Network layer
+Becomes IP packet’s “data”
+Network+ Guide to Networks, 6th Edition
+8
+8
+
+Network+ Guide to Networks, 6th Edition
+9
+Figure 4-2 A TCP segment
+Courtesy Course Technology/Cengage Learning
+9
+
+UDP (User Datagram Protocol)
+Transport layer protocol
+Provides unreliable data delivery services
+Connectionless transport service
+No assurance packets received in correct sequence
+No guarantee packets received at all
+No error checking, sequencing
+Lacks sophistication
+More efficient than TCP
+Useful situations
+Great volume of data must be transferred quickly
+Network+ Guide to Networks, 6th Edition
+10
+Such as live audio or video
+transmissions over the Internet.
+10
+
+Network+ Guide to Networks, 6th Edition
+11
+Figure 4-5 A UDP segment
+Courtesy Course Technology/Cengage Learning
+11
+
+IP (Internet Protocol)
+Network layer protocol
+How and where data delivered, including:
+Data’s source and destination addresses
+Enables TCP/IP to internetwork
+Traverse more than one LAN segment
+More than one network type through router
+Network layer data formed into packets
+IP packet
+Data envelope 
+Contains information for routers to transfer data between different LAN segments
+Network+ Guide to Networks, 6th Edition
+12
+Traverse - negotiate
+12
+
+IP (cont’d.)
+Two versions
+IPv4: unreliable, connectionless protocol
+IPv6
+Newer version of IPv6
+IP next generation
+Released in 1998
+Advantages of IPv6
+Provides billions of additional IP addresses
+Better security and prioritization provisions
+Network+ Guide to Networks, 6th Edition
+13
+13
+
+Network+ Guide to Networks, 6th Edition
+14
+Figure 4-6 An IPv4 packet
+Courtesy Course Technology/Cengage Learning
+14
+
+Network+ Guide to Networks, 6th Edition
+15
+Figure 4-8 An IPv6 packet header
+Courtesy Course Technology/Cengage Learning
+15
+
+IGMP (Internet Group Management Protocol)
+Operates at Network layer of OSI model
+Manages multicasting on networks running IPv4
+Multicasting
+Point-to-multipoint transmission method
+One node sends data to a group of nodes
+Used for Internet teleconferencing or videoconferencing
+Network+ Guide to Networks, 6th Edition
+16
+16
+
+ARP (Address Resolution Protocol)
+Network layer protocol
+Used with IPv4
+Obtains MAC (physical) address of host or node
+Creates database that maps MAC to host’s IP address
+ARP table
+Table of recognized MAC-to-IP address mappings
+Saved on computer’s hard disk
+Increases efficiency
+Contains dynamic and static entries
+Network+ Guide to Networks, 6th Edition
+17
+17
+
+ICMP (Internet Control Message Protocol)
+Network layer protocol
+Reports on data delivery success/failure
+Announces transmission failures to sender
+Network congestion
+Data fails to reach destination
+Data discarded: TTL expired
+ICMP cannot correct errors
+Provides critical network problem troubleshooting information
+ICMPv6 used with IPv6
+Network+ Guide to Networks, 6th Edition
+18
+18
+
+IPv4 Addressing
+Networks recognize two addresses
+Logical (Network layer)
+Physical (MAC, hardware) addresses
+IP protocol handles logical addressing
+Specific parameters
+Unique 32-bit number
+Divided into four octets (sets of eight bits) separated by periods
+Example: 144.92.43.178
+Network class determined from first octet
+Network+ Guide to Networks, 6th Edition
+19
+19
+
+IPv4 Addressing
+IP address consists of:
+Network
+Host
+3 network classes used in local area network
+Class A, B and C
+Network+ Guide to Networks, 6th Edition
+20
+20
+
+IPversion4
+defines a set of addresses that allow applications and higher layer protocols to communicate across heterogeneous networks
+works more efficiently in modern networks
+Can support 2^32 IP addresses in total — around 4.29 billion.
+
+
+
+www.themegallery.com
+
+IPversion4
+http://www.potaroo.net/tools/ipv4/
+www.themegallery.com
+
+Network+ Guide to Networks, 6th Edition
+23
+Table 4-4 Commonly used TCP/IP classes
+Courtesy Course Technology/Cengage Learning
+23
+
+IPv4 Addressing (cont’d.)
+Class A devices
+Class A: value between 1 and 126
+Class A (24 bits for hosts) 224 - 2* = 16,777,214 maximum hosts
+Class A is for very large networks, such as a major international company might have. 
+Share same first octet (bits 0-7)
+Network ID
+Host: second through fourth octets (bits 8-31)
+Class B devices
+Class B: value between 128 and 191
+Class B (16 bits for hosts) 216 - 2* = 65,534 maximum hosts
+Class B is used for medium-sized networks. 
+Share same first two octet (bits 0-15)
+Host: third through fourth octets (bits 16-31)
+
+Network+ Guide to Networks, 6th Edition
+24
+24
+
+IPv4 Addressing (cont’d.)
+Class C devices
+Class C: value between 192 and 223
+Class C (8 bits for hosts) 28 - 2* = 254 maximum hosts
+Class C addresses are commonly used for small to mid-size businesses. 
+Share same first three octet (bits 0-23)
+Host: fourth octet (bits 24-31)
+
+Network+ Guide to Networks, 6th Edition
+25
+25
+
+Network+ Guide to Networks, 6th Edition
+26
+Figure 4-11 IPv4 addresses and their classes
+Courtesy Course Technology/Cengage Learning
+26
+
+27
+IP Addresses as Decimal Numbers
+
+IPv4 Addressing (cont’d.)
+Class D, Class E rarely used (never assign)
+Class D: value between 224 and 239
+Multicasting
+Class E: value between 240 and 255
+Experimental use
+Eight bits have 256 combinations
+Networks use 1 through 254
+0: reserved as placeholder
+255: reserved for broadcast transmission
+
+Network+ Guide to Networks, 6th Edition
+28
+28
+
+IPv4 Addressing (cont’d.)
+Loop back address
+First octet equals 127 (127.0.0.1)
+Loopback test
+Attempting to connect to own machine
+Powerful troubleshooting tool
+Windows
+ipconfig command
+Unix, Linux
+ifconfig command
+
+Network+ Guide to Networks, 6th Edition
+29
+29
+
+Binary and Dotted Decimal Notation
+Dotted decimal notation
+Common way of expressing IP addresses
+Decimal number between 0 and 255 represents each octet
+Period (dot) separates each decimal
+Dotted decimal address has binary equivalent
+Convert each octet
+Remove decimal points
+Network+ Guide to Networks, 6th Edition
+30
+30
+
+Binary and Dotted Decimal Notation
+Decimal
+Binary
+192.168.1.1
+10.11.12.0
+172.90.0.1
+Network+ Guide to Networks, 6th Edition
+31
+11000000 10101000 00000001 00000001
+10101100 01011010 00000000 00000001
+00001010 00001011 00001100 00000000 
+31
+
+Subnet Mask
+32-bit number identifying a device’s subnet (network)
+Combines with device IP address
+Informs network about segment, network where device attached
+Four octets (32 bits)
+Expressed in binary or dotted decimal notation
+Assigned same way as IP addresses
+Manually or automatically (via DHCP)
+Network+ Guide to Networks, 6th Edition
+32
+32
+
+Subnet Mask (cont’d.)
+Network+ Guide to Networks, 6th Edition
+33
+Courtesy Course Technology/Cengage Learning
+Table 4-5 Default subnet masks
+33
+
+IP Addressing – Subnet Mask 
+A network/subnet is a group of IP addresses that have the same network ID
+Network/Subnet Mask
+Purpose: A 32-bi t combination used to describe which portion of an address refers to the network and which part refers to the host id.
+Example:
+
+
+IP Addressing – Subnet Mask Conversion
+Subnet Mask Representation
+Dotted decimal 
+Slash 
+Conversion:
+
+Dotted Decimal Notation
+Slash Notation (Bit Notation)
+/29
+255.128.0.0
+/7
+255.255.192.0
+255.255.248.0
+255.255.255.248
+254.0.0.0
+/9
+/18
+/21
+35
+
+How IP addresses increment
+192.0.0.253
+192.0.0.255
+75.13.255.254
+75.14.0.0
+200.255.255.254
+200.255.255.255
+192.0.0.254
+192.0.1.0
+192.0.1.1
+75.13.255.255
+75.14.0.1
+75.14.0.2
+201.0.0.0
+201.0.0.1
+201.0.0.2
+
+Network, Host, Broadcast Address
+There are three (3) types of IP addresses in a network/subnet
+Network Address: This is the first IP address in the network/subnet
+Host Address: all the IP addresses in between the network and broadcast address
+Broadcast Address: this is the last IP address in the network/subnet
+Note:
+DO NOT ASSIGN NETWORK AND BROADCAST ADDRESS TO DEVICES!!!
+
+Network, Host, Broadcast Address
+Example1:
+
+IP Address: 192.168.1.1
+Subnet Mask:255.255.255.0
+Network I.D. = 192.168.1.X
+Network Address
+Host Addresses
+Broadcast Address
+192.168.1.0
+192.168.1.1 - 192.168.1.254
+192.168.1.255
+
+Network, Host, Broadcast Address
+Example2:
+
+IP Address: 20.21.22.34
+Subnet Mask:255.0.0.0
+Network I.D. = 20.X.X.X
+Network Address
+Host Addresses
+Broadcast Address
+20.0.0.0
+20.0.0.1 – 20.255.255.254
+20.255.255.255
+
+Network, Host, Broadcast Address
+Example3:
+
+IP Address: 133.0.0.133
+Subnet Mask:255.255.0.0
+Network I.D. = 133.0.X.X
+Network Address
+Host Addresses
+Broadcast Address
+133.0.0.0
+133.0.0.1 – 133.0.255.254
+133.0.255.255
+
+Network, Host, Broadcast Address
+Build a list of networks – to be used in network design
+Get the network/subnet address: increment 1 at the Network ID to get the next
+Get the broadcast address: Find the IP address before the next network address
+Get the host address: Find the IP addresses in between the network and broadcast addresses
+
+
+
+
+Network, Host, Broadcast Address
+Example1:
+
+
+
+
+IP Address: 192.168.1.1
+Subnet Mask:255.255.255.0
+Network I.D. = 192.168.1.X
+Network Address
+Host Addresses
+Broadcast Address
+192.168.1.__
+0
+192.168.1.255
+192.168.1.1 – 192.168.1.254
+192.168.2.0
+192.168.3.0
+192.168.4.0
+192.168.2.255
+192.168.3.255
+192.168.4.255
+192.168.2.1 – 192.168.2.254
+192.168.3.1 – 192.168.3.254
+192.168.4.1 – 192.168.4.254
+
+Network, Host, Broadcast Address
+Example2:
+
+
+
+
+IP Address: 123.123.123.123
+Subnet Mask:255.0.0.0
+Network I.D. = 123.X.X.X
+Network Address
+Host Addresses
+Broadcast Address
+123.__.__.__
+123.255.255.255
+123.0.0.1 – 123.255.255.254
+124.0.0.0
+0
+0
+0
+125.0.0.0
+126.0.0.0
+124.0.0.1 – 124.255.255.254
+125.0.0.1 – 125.255.255.254
+126.0.0.1 – 126.255.255.254
+124.255.255.255
+125.255.255.255
+126.255.255.255
+43
+
+IPv6 Addressing
+Composed of 128 bits
+Eight 16-bit fields
+Typically represented in hexadecimal numbers
+Separated by a colon
+Example: FE22:00FF:002D:0000:0000:0000:3012:CCE3
+Abbreviations for multiple fields with zero values
+00FF can be abbreviated FF
+0000 can be abbreviated 0
+Network+ Guide to Networks, 6th Edition
+44
+44
+
+IPv6 Abbreviation
+Successive zeros
+you can use the two colon notation (::) to replace successive groups of all zeros
+Leading zeros 
+You can also omit any leading zeros in a group 
+
+IPv6 Abbreviation
+Example 1:	2001:0eb4:0000:0000:0000:0000:000f:009a
+
+Successive zeros 
+Leading zeros 
+
+Example 2:	1234:0000:0000:0044:0000:0000:0000:000e
+
+Successive zeros 
+Leading zeros 
+
+2001:0eb4::000f:009a
+2001:eb4::f:9a
+1234:0000:0000:0044::000e
+1234:0:0:44::e
+
+IPv6 Addressing
+Exercises:
+FULL
+ABBREVIATION
+fe80:0000:0000:0000:0000:0210:0007:0056
+fcc0:0099:01eb:000d:000b:0000:0000:0004
+5678:c000:0000:0000:0000:0000:0000:cc00
+47
+
+IPv6 Addressing (cont’d.)
+Multicast address
+Used for transmitting data to many different devices simultaneously
+Anycast address
+Represents any one interface from a group of interfaces
+Modern devices and operating systems can use both IPv4 and IPv6
+Network+ Guide to Networks, 6th Edition
+48
+48
+
+Long Term Solution: IPv6 (coming)
+IPv6, or IPng (IP – the Next Generation) uses a 128-bit address space, yielding
+     340,282,366,920,938,463,463,374,607,431,768,211,456  
+possible addresses.
+IPv6 has been slow to arrive
+IPv4 revitalized by new features, making IPv6 a luxury, and not a desperately needed fix
+IPv6 requires new software; IT staffs must be retrained
+IPv6 will most likely coexist with IPv4 for years to come.
+Some experts believe IPv4 will remain for more than 10 years.
+49
+49
+
+Assigning IP Addresses
+Government-sponsored organizations
+Dole out IP addresses
+IANA, ICANN, RIRs
+Companies, individuals
+Obtain IP addresses from ISPs
+Every network node must have unique IP address
+Error message otherwise
+Network+ Guide to Networks, 6th Edition
+50
+50
+
+Internet address allocation
+The Internet Assigned Numbers Authority (IANA) manages the IP address space allocations globally and delegates five(5) regional Internet registries (RIRs) to allocate IP address blocks to local Internet registries (Internet service providers) and other entities.
+
+www.themegallery.com
+The Internet Assigned Numbers Authority (IANA) manages the IP address space allocations globally and delegates five regional Internet registries (RIRs) to allocate IP address blocks to local Internet registries (Internet service providers) and other entities.
+
+51
+
+Internet address allocation
+The 5 major registries are:
+AfriNIC (African Network Information Centre) - Africa Region http://www.afrinic.net
+APNIC (Asia Pacific Network Information Centre) - Asia/Pacific Regionhttp://www.apnic.net
+ARIN (American Registry for Internet Numbers) - North America Regionhttp://www.arin.net
+LACNIC (Regional Latin-American and Caribbean IP Address Registry) - Latin America and some Caribbean Islands http://www.lacnic.net
+RIPE NCC (Reseaux IP Europeans) - Europe, the Middle East, and Central Asiahttp://www.ripe.net
+www.themegallery.com
+
+Internet address allocation
+www.themegallery.com
+
+Internet address allocation
+Organizations  whose  networks  are connected to the Internet obtain network numbers from their Internet Service Provider (INFOCOM Tecnologies, Inc., Mosaic Communications, Inc. ,Any PHNet Regular Member, IPhil Communications Network, Inc., Globe Telecoms G-Net, WorldTel Philippines, Pacific Internet, Tridel Technologies, Virtualink International Corporation, EVOSERVE Evolution Service, PLDT)
+ISP’s  coordinate  with  a  central organization, the Internet Assigned Number Authority, to ensure the uniqueness of the network prefix
+
+www.themegallery.com
+The Internet Assigned Numbers Authority (IANA) manages the IP address space allocations globally and delegates five regional Internet registries (RIRs) to allocate IP address blocks to local Internet registries (Internet service providers) and other entities.
+
+54
+
+Assigning IP Addresses (cont’d.)
+Static IP address
+Manually assigned
+To change: modify client workstation TCP/IP properties
+Human error causes duplicates
+Dynamic IP address
+Assigned automatically
+Most common method
+Dynamic Host Configuration Protocol (DHCP)
+Network+ Guide to Networks, 6th Edition
+55
+55
+
+DHCP (Dynamic Host Configuration Protocol)
+Automatically assigns device a unique IP address
+Application layer protocol
+Reasons for implementing	
+Reduce time and planning for IP address management
+Reduce potential for error in assigning IP addresses
+Enable users to move workstations and printers
+Make IP addressing transparent for mobile users
+Network+ Guide to Networks, 6th Edition
+56
+DHCP leasing process
+Device borrows (leases) an IP address while attached to network
+Lease time
+Determined when client obtains IP address at log on
+User may force lease termination
+DHCP service configuration
+Specify leased address range
+Configure lease duration
+Several steps to negotiate client’s first lease
+
+56
+
+Network+ Guide to Networks, 6th Edition
+57
+Courtesy Course Technology/Cengage Learning
+Figure 4-14 The DHCP leasing process
+Terminating a DHCP Lease
+Expire based on period established in server configuration
+Manually terminated at any time
+Client’s TCP/IP configuration
+Server’s DHCP configuration
+Circumstances requiring lease termination
+DHCP server fails and replaced
+DHCP services run on several server types
+Installation and configurations vary
+57
+
+Sockets and Ports
+Processes assigned unique port numbers
+Process’s socket
+Port number plus host machine’s IP address
+Port numbers
+Simplify TCP/IP communications 
+Ensures data transmitted correctly
+Example
+Telnet port number: 23
+IPv4 host address: 10.43.3.87
+Socket address: 10.43.3.87:23
+Network+ Guide to Networks, 6th Edition
+58
+58
+
+Network+ Guide to Networks, 6th Edition
+59
+Courtesy Course Technology/Cengage Learning
+Figure 4-15 A virtual connection for the telnet service
+59
+
+Sockets and Ports (cont’d.)
+Port number range: 0 to 65535
+Three types
+Well Known Ports
+Range: 0 to 1023
+Operating system or administrator use
+Registered Ports
+Range: 1024 to 49151
+Network users, processes with no special privileges
+Dynamic and/or Private Ports
+Range: 49152 through 65535
+No restrictions
+Network+ Guide to Networks, 6th Edition
+60
+60
+
+Network+ Guide to Networks, 6th Edition
+61
+Courtesy Course Technology/Cengage Learning
+Table 4-6 Commonly used TCP/IP port numbers
+61
+
+Host Names and DNS (Domain Name System)
+TCP/IP addressing
+Long, complicated numbers
+Good for computers
+People remember words better
+Internet authorities established Internet node naming system
+Host
+Internet device
+Host name
+Name describing device
+Network+ Guide to Networks, 6th Edition
+62
+Imagine if you had to identify your friends’ and families’ Social Security numbers whenever
+you wanted to write a note or talk to them. Communication would be frustrating at the very
+least, and perhaps even impossible—especially if you’re the kind of person who has trouble
+remembering even your own Social Security number. Similarly, people prefer to associate
+names with networked devices rather than remember IP addresses. For this reason, the Internet
+authorities established a naming system for all nodes on the Internet.
+62
+
+Domain Names
+Domain
+Group of computers belonging to same organization
+Share common part of IP address
+Domain name
+Identifies domain (loc.gov)
+Associated with company, university, government organization
+Fully qualified host name (blogs.loc.gov)
+Local host name plus domain name
+Network+ Guide to Networks, 6th Edition
+63
+Every host is a member of a domain, or a group of computers that belongs to the same organization
+and has part of their IP addresses in common.
+
+Often, when networking professionals refer to a machine’s host name, they in fact mean its
+local host name plus its domain name—in other words, its fully qualified host name, also
+known as its fully qualified domain name, or FQDN.
+63
+
+Domain Names (cont’d.)
+Label (character string)
+Separated by dots
+Represents level in domain naming hierarchy
+Example: www.google.com
+Top-level domain (TLD): com
+Second-level domain: google
+Third-level domain: www
+Second-level domain
+May contain multiple third-level domains
+ICANN established domain naming conventions
+Network+ Guide to Networks, 6th Edition
+64
+64
+
+Network+ Guide to Networks, 6th Edition
+65
+Courtesy Course Technology/Cengage Learning
+Table 4-7 Some well-known top-level domains
+65
+
+Domain Names (cont’d.)
+ICANN approved over 240 country codes
+Host and domain names restrictions
+Any alphanumeric combination up to 253 characters
+Include hyphens, underscores, periods in name
+No other special characters
+Network+ Guide to Networks, 6th Edition
+66
+66
+
+DNS (Domain Name System)
+Hierarchical
+Associate domain names with IP addresses
+DNS refers to:
+Application layer service accomplishing association
+Organized system of computers, databases making association possible
+DNS redundancy
+Many computers across globe related in hierarchical manner
+Root servers
+13 computers (ultimate authorities)
+Network+ Guide to Networks, 6th Edition
+67
+In the mid-1980s, computer scientists responsible for the Internet’s growth devised a hierarchical
+way of associating domain names with IP addresses, called the DNS (Domain Name
+System or Domain Name Service).
+67
+
+DNS (cont’d.)
+Three components
+Resolvers
+Any hosts on Internet needing to look up domain name information
+Name servers (DNS servers)
+Databases of associated names, IP addresses
+Provide information to resolvers on request
+Namespace 
+Abstract database of Internet IP addresses, associated names
+Describes how name servers of the world share DNS information
+Network+ Guide to Networks, 6th Edition
+68
+68
+
+Network+ Guide to Networks, 6th Edition
+69
+Courtesy Course Technology/Cengage Learning
+Figure 4-17 Domain name resolution
+Large organizations
+Often maintain two name servers
+Primary and secondary
+Ensures Internet connectivity
+DHCP service assigns clients appropriate addresses
+Occasionally may want to manually configure
+69
+
+DDNS (Dynamic DNS)
+Used in Website hosting
+Manually changing DNS records unmanageable
+Process
+Service provider runs program on user’s computer
+Notifies service provider when IP address changes
+Service provider’s server launches routine to automatically update DNS record 
+Effective throughout Internet in minutes
+Not DNS replacement
+Larger organizations buy statically assigned IP address
+Network+ Guide to Networks, 6th Edition
+70
+70
+
+Application Layer Protocols
+Work over TCP or UDP plus IP
+Translate user requests into format readable by network
+HTTP
+Application layer protocol central to using Web
+DHCP
+Automatic address assignment
+Additional Application layer protocols exist
+Network+ Guide to Networks, 6th Edition
+71
+71
+
+Telnet
+Terminal emulation protocol
+Log on to remote hosts
+Using TCP/IP protocol suite
+TCP connection established
+Keystrokes on user’s machine act like keystrokes on remotely connected machine
+Often connects two dissimilar systems
+Can control remote host
+Drawback
+Notoriously insecure
+Network+ Guide to Networks, 6th Edition
+72
+72
+
+FTP (File Transfer Protocol)
+Send and receive files via TCP/IP
+Host running FTP server portion
+Accepts commands from host running FTP client
+FTP commands
+Operating system’s command prompt
+No special client software required
+FTP hosts allow anonymous logons
+Secure FTP (SFTP)
+More secure version of FTP
+Network+ Guide to Networks, 6th Edition
+73
+73
+
+TFTP (Trivial File Transfer Protocol)
+Enables file transfers between computers
+Simpler (more trivial) than FTP
+TFTP relies on Transport layer UDP
+Connectionless
+Does not guarantee reliable data delivery
+No ID or password required
+Security risk
+No directory browsing allowed
+Useful to load data, programs on diskless workstation
+Network+ Guide to Networks, 6th Edition
+74
+74
+
+NTP (Network Time Protocol)
+Synchronizes network computer clocks
+Depends on UDP Transport layer services
+Benefits from UDP’s quick, connectionless nature
+Time sensitive
+Cannot wait for error checking
+Time synchronization importance
+Routing
+Time-stamped security methods
+Maintaining accuracy, consistency between multiple storage systems
+Network+ Guide to Networks, 6th Edition
+75
+75
+
+PING (Packet Internet Groper)
+Provides verification
+TCP/IP installed, bound to NIC, configured correctly, communicating with network
+Host responding
+Uses ICMP services
+Send echo request and echo reply messages
+Determine IP address validity
+Ping IP address or host name
+Ping loopback address: 127.0.0.1
+Determine if workstation’s TCP/IP services running
+Network+ Guide to Networks, 6th Edition
+76
+76
+
+PING (cont’d.)
+Operating system determines PING command options, switches, syntax
+
+Network+ Guide to Networks, 6th Edition
+77
+Courtesy Course Technology/Cengage Learning
+Figure 4-19 Output from successful and unsuccessful PING
+77
+
+Subnetting
+Network+ Guide to Networks, 6th Edition
+78
+
+Subnetting
+A method of dividing a network into two or more smaller networks
+Advantages
+Increases routing efficiency
+Enhances the security of the network
+Reduces the size of the broadcast domain
+Network+ Guide to Networks, 6th Edition
+79
+
+Classful Addressing
+Based on classes of IPv4: A, B, C. Class D is for Multicast and is rarely used.  Class E is reserved and is not currently used.
+Class A
+IP address 0.0.0.0 to 126.255.255.255 use subnet mask = 255.0.0.0
+Class B
+IP addresses 128.0.0.0 to 191.255.255.255 use subnet mask = 255.255.0.0
+Class C
+IP addresses 192.0.0.0 to 223.255.255.255 use a subnet mask = 255.255.255.0
+
+Classless Addressing (IP Subnetting)
+Classless IP addressing means you can use any subnet mask you want, even assigning partial blocks. 
+It uses any subnet mask.
+Uses any IP address
+Uses IP Subnetting
+
+Classful vs Classless
+Classful
+Good: expansion
+Bad: lots of IP addresses are wasted
+Classless
+Good: conserve IP addresses
+Bad: expansion and resubnetting
+
+Network Design
+Rules in Network Design
+You can only assign host addresses to devices
+Each network device must have a unique IP address
+Use a unique network address per location/segment
+
+IPv4 Subnetting – No of Subnets
+Formula for subnetting based on the no. of subnet
+/default subnet mask + /N = new subnet mask
+N: 2N ≥ no of subnets
+Find the new subnet mask’s multiple and octet
+Build a list of networks using the new subnet mask.  Use multiple and octet from step 2.
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+28
+256
+
+IPv4 Subnetting – No of Subnets
+Example 1: What subnet mask should be used to support 3 subnets if you are using a network address of 192.168.1.0/24?
+
+
+N = 2N ≥ 3
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+28
+256
+N = 22 ≥ 3 = 4 ≥ 3
+N = 2
+Step 1:
+ new subnet mask = /24 + /2 = /26
+Step 2:
+Get the increment and octet
+/26
+64 increments
+4th octet
+
+IPv4 Subnetting – No of Subnets
+Example 1: 	What subnet mask should be used to support 3 subnets if you are using a network address of 192.168.1.0/24?
+
+
+Step 3:
+build list of network
+Network:
+Host:
+
+Broadcast
+192.168.1.0/26
+192.168.1.64/26
+192.168.1.128/26
+192.168.1.63/26
+192.168.1.127/26
+192.168.1.191/26
+192.168.1.1/26 –
+192.168.1.62/26
+
+192.168.1.65/26 - 
+192.168.1.126/26
+192.168.1.129/26 – 
+192.168.1.190/26
+
+192.168.1.192/26
+
+IPv4 Subnetting – No of Subnets
+Example 2: Divide the network: 172.16.0.0/16 into 5 equal subnets
+
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+28
+256
+
+IPv4 Subnetting – No of Hosts
+Formula for subnetting based on the no. of required hosts
+/32 - /H = new subnet mask
+H: 2N – 2 ≥ no of hosts
+Find the new subnet mask’s multiple and octet
+Build a list of networks using the new subnet mask.  Use multiple and octet from step 2.
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+28
+256
+
+IPv4 Subnetting – No of Hosts
+Example 1: What subnet mask must be used to support 12 hosts if 	you are using a network address of 192.168.1.0/24?
+
+
+H = 2N - 2 ≥ 12
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+27
+256
+H = 24 - 2 ≥ 12 = 16 ≥ 12
+H = 4
+Step 1:
+ new subnet mask = /32 - /4 = /28
+Step 2:
+Get the increment and octet
+/28
+16 increments
+4th octet
+
+IPv4 Subnetting – No of Hosts
+Example 1: What subnet mask must be used to support 12 hosts if you are using a network address of 192.168.1.0/24?
+
+
+Step 3:
+build list of network
+Network:
+Host:
+
+Broadcast
+192.168.1.0/28
+192.168.1.16/28
+192.168.1.32/28
+192.168.1.15/28
+192.168.1.31/28
+192.168.1.47/28
+192.168.1.1/28 –
+192.168.1.14/28
+192.168.1.17/28 - 
+192.168.1.30/28
+192.168.1.33/28 – 
+192.168.1.46/28
+192.168.1.48/28
+
+IPv4 Subnetting – No of Hosts
+Example 2: What subnet mask must be used to support 6 hosts if you are using a network address of 10.0.0.0/8?
+
+IPv4 Subnetting – VLSM (Variable Length  Subnet Mask)
+VLSM allows you to use more than one subnet mask on a classful network.
+This allows you to define a subnet mask based on the desired number of hosts per subnet, which reduces the number of wasted IP addresses.
+
+IPv4 Subnetting – VLSM (Variable Length  Subnet Mask)
+Arranged the number of hosts from LARGEST to SMALLEST.
+Perform subnetting based on the number of hosts (start with the largest number of hosts) Find the new subnet mask of each network; get their multiple and octet.
+Build a list of networks using the new subnet mask. Use the multiple and octet from step 2.
+
+IPv4 Subnetting – VLSM (Variable Length  Subnet Mask)
+Example 1: Use VLSM in subnetting the network: 192.168.1.0/24
+
+No of hosts: 10
+No of hosts: 50
+No of hosts: 2
+
+Network+ Guide to Networks, 6th Edition
+95
+Powers of 2
+21
+2
+22
+4
+23
+8
+24
+16
+25
+32
+26
+64
+27
+128
+27
+256
+
+
+
+
+
+
+Network Address
+Hosts Addresses
+
+
+Broadcast Address
+4
+/28
+96
+
+IPv4 Subnetting – VLSM (Variable Length  Subnet Mask)
+Example 2: 172.16.0.0/16
+
+No of hosts: 2
+No of hosts: 30
+No of hosts: 100
+
+
+Summary
+Protocols define standards for network communication
+TCP/IP suite most popular
+TCP: connection-oriented subprotocol
+UDP: efficient, connectionless service
+IP provides information about how and where to deliver data
+IPv4 addresses: unique 32-bit numbers
+IPv6 addresses: composed of eight 16-bit fields
+DHCP assigns addresses automatically
+DNS tracks domain names and their addresses
+Network+ Guide to Networks, 6th Edition
+99
+99
+
+Practice makes perfect:
+What subnet mask should be used to support 6 subnets if you are using a network address of 190.18.1.0/16?
+What subnet mask must be used to support 20 hosts if you are using a network address of 200.0.1.0/24?
+
+
+
